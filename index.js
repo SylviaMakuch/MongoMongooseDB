@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 main().catch((err) => console.log(err));
 
 async function main() {
-  await mongoose.connect("mongodb://localhost:27017/user");
+  await mongoose.connect("mongodb://localhost:27017/userdata");
   console.log("CONNECTED!");
 }
 const userSchema = new mongoose.Schema({
@@ -13,8 +13,8 @@ const userSchema = new mongoose.Schema({
   specialWord: String,
 });
 
-const User = mongoose.model("User", userSchema);
-const user1 = new User({
+const UserData = mongoose.model("User", userSchema);
+const user1 = new UserData({
   firstName: "Sylvia",
   lastName: "Makuch",
   email: "sylviamakuch2@gmail.com",
