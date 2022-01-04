@@ -13,7 +13,7 @@ const userSchema = new mongoose.Schema({
   specialWord: String,
 });
 
-const UserData = mongoose.model("User", userSchema);
+const UserData = mongoose.model("UserData", userSchema);
 const user1 = new UserData({
   firstName: "Sylvia",
   lastName: "Makuch",
