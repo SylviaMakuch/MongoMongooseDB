@@ -2,6 +2,7 @@ const express = require('express');
 const app = express ();
 const path = require ('path');
 const mongoose = require("mongoose");
+const Product = require('./product')
 __dirname = path.resolve(path.dirname(''));
 
 mongoose.connect('mongodb://localhost:27017/catnip', { useNewUrlParser: true, useUnifiedTopology: true })
