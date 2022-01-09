@@ -1,4 +1,4 @@
-const Product = require("./product");
+const Product = require("./model/product");
 const mongoose = require("mongoose");
 mongoose
   .connect("mongodb://localhost:27017/catniptypes", {
