@@ -3,7 +3,6 @@ const app = express();
 const path = require("path");
 const mongoose = require("mongoose");
 const Product = require("./model/product");
-const { createUnzip } = require("zlib");
 __dirname = path.resolve(path.dirname(""));
 
 mongoose
