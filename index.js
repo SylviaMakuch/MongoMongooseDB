@@ -6,7 +6,7 @@ const Product = require("./model/product");
 __dirname = path.resolve(path.dirname(""));
 
 mongoose
-  .connect("mongodb://localhost:27017/catnip", {
+  .connect("mongodb://localhost:27017/catniptypes", {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
