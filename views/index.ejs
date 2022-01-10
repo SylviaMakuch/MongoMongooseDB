@@ -10,7 +10,8 @@
     <h1>Products!</h1>
     <ul>
       <% for(let catniptypes of products) { %>
-      <li><%= catniptypes.name %></li>
+      <!-- <li><%= catniptypes.name %></li>  -->
+      <li><a href="/products/<%=catniptypes._id%>"><%= catniptypes.name %></a> </li>
       <% }%>
     </ul>
   </body>
