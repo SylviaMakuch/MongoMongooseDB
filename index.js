@@ -29,14 +29,14 @@ app.get("/products", async (req, res) => {
   res.render("index", { products });
 });
 
-app.get('products/new', (req, res) => {
-  res.render("./products/new");
-});
+app.get('/products/new', (req, res) => {
+    res.render('products/new.ejs' )
+})
 
-app.post('/products', (req, res)=>{
-    res.send('making it for you')
-    console.log(req.body)
-    // we dont have acess from the body,we need  parse first .: add the url encoded to tell express to use the middle ware here 
+app.post('/products', async (req, res) => {
+    const newProduct = new Product(req.body);
+    await newProduct.save();
+    res.redirect(`/products/${newProduct._id}`)
 })
 
 app.get("/products/:id", async (req, res) => {
