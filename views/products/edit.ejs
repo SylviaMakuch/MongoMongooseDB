@@ -9,12 +9,18 @@
 
 <body>
     <h1>Edit Product</h1>
-    <form action="/products/<%=product._id%>?_method=PUT" method="POST">
+    <form action="/products/<%=product._id%>?_method=PUT" >
         <label for="name">Product Name</label>
         <input type="text" name="name" id="name" placeholder="product name" value="<%=product.name%>">
         <label for="price">Price (Unit)</label>
         <input type="number" id="price" name="price" placeholder="price" value="<%= product.price %>">
-            <button>Submit</button>
+        <label for="category">Select Category</label>
+        <select name="category" id="catergory">
+            <option value="Small">Small</option>
+            <option value="Medium">Medium</option>
+            <option value="Large">Large</option>
+        </select>    
+         <button>Submit</button>
     </form>
 
     <a href="/products/<%=product._id%>">Cancel</a>
